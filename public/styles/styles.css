@@ -3,9 +3,16 @@
 }
 
 body {
-  background-image: url("https://ak8.picdn.net/shutterstock/videos/7865338/thumb/8.jpg?i10c=img.resize(height:160)");
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Bubble-Desktop-Wallpapers-768x480.jpg");
+
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+label, h2, h3{
+  color: white;
+}
 
 .dispScore{
   font-size: 50px;
