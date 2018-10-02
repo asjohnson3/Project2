@@ -23,5 +23,20 @@ label, h1, h2, h3{
 }
 
 #example-list{
+  margin-bottom: 50px;
+}
+
+.image {
+  text-align: center;
   margin-bottom: 20px;
+}
+
+img {
+  height:500px;
+  width: 500px;
+  /* text-align: center; */
+}
+
+.card {
+  margin-bottom: 50px;
 }
