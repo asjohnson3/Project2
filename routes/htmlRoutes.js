@@ -23,6 +23,15 @@ module.exports = function(app) {
     });
   });
 
+    // Load game play page and pass in a user by id
+    app.get("/play", function(req, res) {
+      db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+        res.render("play", {
+          example: dbExample
+        });
+      });
+    });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
