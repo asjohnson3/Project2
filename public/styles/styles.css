@@ -5,3 +5,16 @@
 body {
   background-image: url("https://ak8.picdn.net/shutterstock/videos/7865338/thumb/8.jpg?i10c=img.resize(height:160)");
 }
+
+
+.dispScore{
+  font-size: 50px;
+}
+
+.dispText{
+  font-size: 25px;
+}
+
+#example-list{
+  margin-bottom: 20px;
+}
