@@ -4,7 +4,11 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2 class = "text-center">Game Webpage</h2>
-        {{!-- <form class="clearfix mb-4" action="POST">
+
+
+
+        Adding Example to the database
+        <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
@@ -14,13 +18,17 @@
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form> --}}
+        </form>
+
+
+
         <h3 class = "text-center">Leaderboard:</h3>
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="example/{{this.id}}">{{this.id}}. {{this.text}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
+            <div class = "text-center">{{this.score}}</div>
           </li>
           {{/each}}
         </ul>

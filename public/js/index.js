@@ -34,6 +34,8 @@ var API = {
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
     var $examples = data.map(function(example) {
+      console.log('response')
+      console.log(data);
       var $a = $("<a>")
         .text(example.text)
         .attr("href", "/example/" + example.id);
@@ -59,6 +61,16 @@ var refreshExamples = function() {
   });
 };
 
+// var orderExamples = function() {
+//   API.getExamples().then(function(data) {
+//     console.log(data);
+//     var $examples = data.map(function(example) {
+//       var $a 
+//     })
+//   })
+// }
+
+// orderExamples();
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
@@ -74,12 +86,17 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
+  // API.saveExample(example).then(function() {
+  //   refreshExamples();
+  // });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  // $exampleText.val("");
+  // $exampleDescription.val("");
+
+  API.saveExample(example)
+  .then(function(data) {
+    location.reload();
+  });
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
