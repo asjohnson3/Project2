@@ -37,8 +37,85 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> --}}
-    <a class="nav-link" href="#">Sign In</a>
-    <a class="nav-link" href="#">New User</a>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="loginLabel">Login and start playing Marble-pop!</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="panel-body">
+        <form accept-charset="UTF-8" role="form">
+          <fieldset>
+            <div class="form-group">
+              <input class="form-control" placeholder="Username" name="username" type="text">
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Password" name="password" type="password" value="">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+              </label>
+            </div>
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<button type="button" class="btn btn-primary ml-3 mr-3" data-toggle="modal" data-target="#newUser">
+New User
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="newUserLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="newUserLabel">Sign up and start playing Marble-pop!</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="panel-body">
+        <form accept-charset="UTF-8" role="form">
+          <fieldset>
+            <div class="form-group">
+              <input class="form-control" placeholder="Username" name="username" type="text">
+            </div>
+            <div class="form-group password1">
+              <input class="form-control" placeholder="Password" name="password" type="password" value="">
+            </div>
+            <div class="form-group password2">
+              <input class="form-control" placeholder="Confirm Password" name="confirmPassword" type="password" value="">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+              </label>
+            </div>
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Create a profile">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
   </div>
 </nav>
