@@ -86,6 +86,8 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
+    username: $exampleText.val().trim(),
+    password: $exampleDescription.val().trim(),
     description: $exampleDescription.val().trim(),
     score: $exampleScore.val().trim()
   };
