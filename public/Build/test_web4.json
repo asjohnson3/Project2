@@ -1,0 +1,12 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Marble Soda",
+"dataUrl": "test_web4.data.unityweb",
+"wasmCodeUrl": "test_web4.wasm.code.unityweb",
+"wasmFrameworkUrl": "test_web4.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
