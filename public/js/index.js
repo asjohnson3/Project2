@@ -11,6 +11,7 @@ var usernameCreate = $(".username1");
 var passwordInput = $(".password");
 var passwordInput1 = $(".password1");
 var passwordInput2 = $(".password2");
+var welcomePageUsername = $("#nameFromDatabase");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -132,7 +133,6 @@ newUserButton.on("click", function () {
     password: passwordInput1.val().trim()
   };
 
-
   if (!usernameCreate.val().trim() || !passwordInput1.val().trim() || !passwordInput2.val().trim()) {
     return;
   }
@@ -140,12 +140,11 @@ newUserButton.on("click", function () {
   if (passwordInput1.val().trim() !== passwordInput2.val().trim()) {
     alert("Please enter the same password on both fields");
   } else {
-    API.saveExample(example)
-    // .then(function (data) {
-    //   location.reload();
-    // });
+    
+    API.saveExample(example).then(function() {
+      window.location.href = "/example";
+    });
   }
-
 });
 
 loginButton.on("click", function () {
@@ -158,6 +157,7 @@ loginButton.on("click", function () {
       
       if (data[i].username === usernameInput.val().trim() && data[i].password === passwordInput.val().trim()) {
         return alert("Welcome");
+        window.location.href = "/play";
       }
 
       if (data[i].username === usernameInput.val().trim() && data[i].password !== passwordInput.val().trim()) {
@@ -174,4 +174,8 @@ loginButton.on("click", function () {
     }
 
   });
+});
+
+$("button").on("click", function () {
+  console.log("hello");
 });
