@@ -377,7 +377,3 @@ loginButton.on("click", function () {
   });
 
 });
-
-$("button").on("click", function () {
-  console.log("hello");
-});
