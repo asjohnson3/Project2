@@ -92,12 +92,12 @@ nav{
 }
 /* form style */
 
-.transition, form button, form .question label, form .question input[type="text"] {
+/* .transition, form button, form .question label, form .question input[type="text"] {
   -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-}
+} */
 
 * {
   font-family: Helvetica, sans-serif;
@@ -169,16 +169,13 @@ form .question:last-of-type {
   padding-bottom: 0;
 }
 form .question label {
-  transform-origin: left center;
+  /* transform-origin: left center; */
   color: #FADF63;
   font-weight: 100;
   letter-spacing: 0.01em;
-  font-size: 17px;
+  font-size: 30px;
   box-sizing: border-box;
-  padding: 10px 15px;
   display: block;
-  position: absolute;
-  margin-top: -40px;
   z-index: 2;
   pointer-events: none;
 }
@@ -203,25 +200,23 @@ form .question input[type="text"]:focus {
   outline: none;
   background: #F4D35E;
   color: #FADF63;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
-form .question input[type="text"]:valid {
-  margin-top: 30px;
-}
-form .question input[type="text"]:focus ~ label {
+
+/* form .question input[type="text"]:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
   -webkit-transform: translate(0, -35px);
   transform: translate(0, -35px);
-}
-form .question input[type="text"]:valid ~ label {
+} */
+/* form .question input[type="text"]:valid ~ label {
   text-transform: uppercase;
   font-style: italic;
   -moz-transform: translate(5px, -35px) scale(0.6);
   -ms-transform: translate(5px, -35px) scale(0.6);
   -webkit-transform: translate(5px, -35px) scale(0.6);
   transform: translate(5px, -35px) scale(0.6);
-} 
+}  */
 
 
 .btn{

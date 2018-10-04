@@ -7,26 +7,33 @@
 
 {{!-- 
         <h1 class = "text-center welcome" >WELCOME BACK {{example.id}}</h1> --}}
-        <h1 contenteditable data-heading="WELCOME BACK" id="welcome">WELCOME BACK{{example.id}}</h1>
+        <h1 contenteditable data-heading="WELCOME BACK" id="welcome">WELCOME BACK{{example.id}} {{example.text}}</h1>
       
 
       <div class="card mt-4">
-        <div class="card-body">
+        <div class="card-body" style = "text-align: center">
 
-             <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Marble Soda</div>
-      </div>
+          {{!-- <div class="webgl-content"> --}}
+          <div id="gameContainer" style="height: 500px; margin-left: 100px"></div>
+        {{!-- <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">Marble Soda</div>
+        </div> --}}
             
 
             <a href="/"><button id="backhome">← Back To Home</button></a>
-<div id="t" style="display: none">
-    <img class="someClass" src="{{game.jpg}}">
-</div>
+          {{!-- <div id="t" style="display: none"> --}}
+              {{!-- <img class="someClass" src="{{game.jpg}}"> --}}
+          {{!-- </div> --}}
 
+
+        {{!-- </div> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           {{!-- <h5 class="card-title">Example</h5>
           <p>
             <strong>ID</strong>: {{example.id}}</p>
@@ -37,8 +44,3 @@
           <p>
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a> --}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
