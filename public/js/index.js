@@ -269,15 +269,6 @@ var refreshExamples = function() {
   });
 };
 
-// var orderExamples = function() {
-//   API.getExamples().then(function(data) {
-//     console.log(data);
-//     var $examples = data.map(function(example) {
-//       var $a 
-//     })
-//   })
-// }
-
 // orderExamples();
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list

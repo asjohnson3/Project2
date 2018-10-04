@@ -20,7 +20,9 @@ module.exports = function(app) {
       res.render("example", {
         example: dbExample
       });
+
     });
+    // res.render("play");
   });
 
     // Load game play page and pass in a user by id
