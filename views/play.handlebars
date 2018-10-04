@@ -1,16 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
-
-        <h1 class = "text-center" >Welcome back ????? {{example.id}}</h1>
+{{!-- 
+        <h1 class = "text-center welcome" >WELCOME BACK {{example.id}}</h1> --}}
+        <h1 contenteditable data-heading="WELCOME BACK" id="welcome">WELCOME BACK{{example.id}}</h1>
+      
       <div class="card mt-4">
         <div class="card-body">
             <div class = "image">
                 <img src="https://d2.alternativeto.net/dist/s/classic-labyrinth-3d-maze_161140_full.webp?format=jpg&width=1600&height=1600&mode=min&upscale=false" alt="test image" >
             </div>
+            </div>
             
 
-            <a href="/">← Back To Home</a>
+            <a href="/"><button id="backhome">← Back To Home</button></a>
 <div id="t" style="display: none">
     <img class="someClass" src="{{game.jpg}}">
 </div>
