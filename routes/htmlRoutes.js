@@ -25,11 +25,7 @@ module.exports = function(app) {
 
     // Load game play page and pass in a user by id
     app.get("/play", function(req, res) {
-      db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-        res.render("play", {
-          example: dbExample
-        });
-      });
+    res.render("play");
     });
 
   // Render 404 page for any unmatched routes
