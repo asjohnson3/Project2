@@ -1,5 +1,5 @@
 .list-group-item {
-  line-height: 2.5;
+  line-height: 0.8;
 }
 
 body {
@@ -190,7 +190,7 @@ form .question input[type="text"] {
   box-sizing: border-box;
   padding: 10px 15px;
   border-radius: 60px;
-  color: #FADF638;
+  color: #F4D35E;
   font-weight: 100;
   letter-spacing: 0.01em;
   position: relative;
@@ -199,7 +199,8 @@ form .question input[type="text"] {
 form .question input[type="text"]:focus {
   outline: none;
   background: #F4D35E;
-  color: #FADF63;
+  color: #EE4266;
+  font-weight:40px;
   /* margin-top: 30px; */
 }
 
@@ -227,6 +228,8 @@ form .question input[type="text"]:focus {
 .navbar{
   background-color:#F7EE7F!important;
   opacity: 20%!important;
+  padding-top:5px;
+  padding-bottom:5px;
 }
 
 .lead{
@@ -254,3 +257,39 @@ form .question input[type="text"]:focus {
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
 
+.username{
+  font-size:35px;
+  font-family: 'Fredoka One', cursive;
+  color:#3590F3;
+}
+
+.score {
+  font-size:20px;
+}
+
+.navbar-brand{
+color:#EE4266!important;
+font-family: 'Shojumaru', cursive;
+font-size:33px;
+}
+
+.headname{
+  font-family: 'Frijole', cursive;
+  color:#F7EE7F!important;
+  font-size:60px;
+  margin-top:40px;
+  margin-bottom:0;
+}
+
+#welcome{
+  font-family: 'Frijole', cursive;
+  color:#F7EE7F!important;
+  font-size:40px;
+  margin-top:40px;
+  margin-bottom:10px;
+}
+
+.nav-link{
+  font-weight: bold!important;
+  color:#EE4266!important;
+}
