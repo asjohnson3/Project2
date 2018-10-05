@@ -344,12 +344,18 @@ loginButton.on("click", function () {
     var valid = true;
     console.log(usernameInput.val()); 
     for (var i = 0; i < data.length; i++) {
-      
+      console.log(data[i].username);
       if (data[i].username === usernameInput.val().trim() && data[i].password === passwordInput.val().trim()) {
-        console.log("hhhhhhhhhhhhhhhhhhhh");
+        // var valid = true;
+        sessionStorage.setItem('user', data[i].username);
+        sessionStorage.setItem('score', data[i].score);
+        $("#sessionUser").text(sessionStorage.getItem("user"));
+        $("#sessionUser").html(sessionStorage.getItem("user"));
         window.location.href = "/play";
         // return alert("Welcome");
-
+        $("#sessionUser").text(sessionStorage.getItem("user"));
+        $("#sessionUser").html(sessionStorage.getItem("user"));
+        return;
       }
 
       if (data[i].username === usernameInput.val().trim() && data[i].password !== passwordInput.val().trim()) {

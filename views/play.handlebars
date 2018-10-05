@@ -2,14 +2,7 @@
   <div class="row">
     <div class="col-8 offset-2">
 
-
-        <h1 class = "text-center" >Welcome back ????? {{example.id}} $</h1>
-
-{{!-- 
-        <h1 class = "text-center welcome" >WELCOME BACK {{example.id}}</h1> --}}
-        <h1 contenteditable data-heading="WELCOME BACK" id="welcome">WELCOME BACK{{example.id}} {{example.text}}</h1>
-      
-
+        <h1 id = "sessionUser" style = "text-align: center">{{user}}</h1>
       <div class="card mt-4">
         <div class="card-body" style = "text-align: center">
 
@@ -44,3 +37,5 @@
           <p>
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a> --}}
+
+            <script>$("#sessionUser").text("Welcome back " + sessionStorage.getItem("user"));</script>
