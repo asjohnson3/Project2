@@ -25,10 +25,10 @@ module.exports = function(app) {
     // res.render("play");
   });
 
-    // Load game play page and pass in a user by id
-    app.get("/play", function(req, res) {
+  // Load game play page and pass in a user by id
+  app.get("/play", function(req, res) {
     res.render("play");
-    });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
