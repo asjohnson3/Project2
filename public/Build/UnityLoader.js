@@ -19,9 +19,9 @@ function(e){
                 console.log("true");
                 // updatePost(newScore);
             }
-            // else{
-            //     console.log(false);
-            // }
+            else{
+                console.log("false");
+            }
             
         };
 }
