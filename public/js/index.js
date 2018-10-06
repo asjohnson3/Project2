@@ -353,8 +353,6 @@ loginButton.on("click", function () {
         $("#sessionUser").html(sessionStorage.getItem("user"));
         window.location.href = "/play";
         // return alert("Welcome");
-        $("#sessionUser").text(sessionStorage.getItem("user"));
-        $("#sessionUser").html(sessionStorage.getItem("user"));
         return;
       }
 

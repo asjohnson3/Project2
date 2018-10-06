@@ -13,8 +13,22 @@
           <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
           <div class="title">Marble Soda</div>
         </div> --}}
-            
 
+
+
+    
+
+
+{{!-- 
+<form>
+          <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="text" class="form-control" id="score-ex" placeholder="0">
+        </div>
+            <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+</form> --}}
             <a href="/"><button id="backhome">← Back To Home</button></a>
           {{!-- <div id="t" style="display: none"> --}}
               {{!-- <img class="someClass" src="{{game.jpg}}"> --}}
@@ -27,6 +41,13 @@
     </div>
   </div>
 </div>
+        {{!-- <form>          
+               <div class="question">
+            <label for="example-score" style = "font-weight: bold; text-align: center">Score</label>
+            <input type="text" id="example-score" class="form-control" aria-describedby="example-score" placeholder="Enter Score">
+          </div>
+          <button id="submitbtn">Submit</button>
+          </form> --}}
           {{!-- <h5 class="card-title">Example</h5>
           <p>
             <strong>ID</strong>: {{example.id}}</p>
@@ -38,4 +59,20 @@
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a> --}}
 
-            <script>$("#sessionUser").text("Welcome back " + sessionStorage.getItem("user"));</script>
+<script>
+
+  $("#sessionUser").text("Welcome back " + sessionStorage.getItem("user"));
+
+
+
+</script>
+
+  {{!-- var user = sessionStorage.getItem("user");
+  var score = sessionStorage.getItem("score");
+  var newScore = sessionStorage.getItem("newScore"); --}}
+
+
+{{!--   
+  if (newScore > score || newScore === null){
+    sessionStorage.setItem('score', newScore);
+  } --}}
