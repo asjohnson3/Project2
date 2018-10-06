@@ -29,7 +29,7 @@ module.exports = function(app) {
   // PUT route for updating posts
   app.put("/api/examples", function(req, res) {
     db.Example.update(
-      {score:req.body.score},
+      {score: req.body.score},
       {
         where: {
           username: req.body.username

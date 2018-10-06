@@ -13,9 +13,26 @@ function(e){
         console.log(e); 
         if(Number.isInteger(parseInt(e))){
             sessionStorage.setItem('newScore',e);
-            // updatePost(e);
             console.log(user, score, newScore); 
-            //   // PUT route for updating posts
+
+            if (newScore > score){
+                console.log("true");
+                // updatePost(newScore);
+            }
+            // else{
+            //     console.log(false);
+            // }
+            
+        };
+}
+  // Update a given post, bring user to the blog page when done
+//   function updatePost(post) {
+//     $.ajax({
+//       method: "PUT",
+//       url: "/api/examples",
+//       data: post
+//     })
+//   }            //   // PUT route for updating posts
             // app.put("/api/examples", function(req, res) {
             //     db.Post.update(req.body,{ where: {
             //         username: req.body.id
@@ -24,12 +41,9 @@ function(e){
             //     res.json(dbExample);
             //     });
             // });
-                }
-        // };
-    
-
-
-
-}
-
+            // var example = {
+            //     use
+            // }
+            // Example.update({ score: newScore}, {where: {username: user}});
+                 // };
 ,printErr:function(e){console.error(e)},Jobs:{},buildDownloadProgress:{},resolveBuildUrl:function(e){return e.match(/(http|https|ftp|file):\/\//)?e:t.substring(0,t.lastIndexOf("/")+1)+e},streamingAssetsUrl:function(){return o(this.resolveBuildUrl("../StreamingAssets"))},wasmRequest:function(e,t){this.wasmCache?(this.wasmCache.request={wasmInstantiate:e,callback:t},this.wasmCache.update()):e(this.wasmBinary).then(function(e){t(e.instance)})}},SetFullscreen:function(){if(a.Module.SetFullscreen)return a.Module.SetFullscreen.apply(a.Module,arguments)},SendMessage:function(){if(a.Module.SendMessage)return a.Module.SendMessage.apply(a.Module,arguments)}};a.Module.gameInstance=a,a.popup=function(e,t){return UnityLoader.Error.popup(a,e,t)},a.Module.postRun.push(function(){a.onProgress(a,1)});for(var i in r)if("Module"==i)for(var s in r[i])a.Module[s]=r[i][s];else a[i]=r[i];return n(e,a)||document.addEventListener("DOMContentLoaded",function(){n(e,a)}),a},Utils:{assert:function(e,t){e||abort("Assertion failed: "+t)},optimizeMathFround:function(e,t){console.log("optimizing out Math.fround calls");for(var r={LOOKING_FOR_MODULE:0,SCANNING_MODULE_VARIABLES:1,SCANNING_MODULE_FUNCTIONS:2},n=["EMSCRIPTEN_START_ASM","EMSCRIPTEN_START_FUNCS","EMSCRIPTEN_END_FUNCS"],o="var",a="global.Math.fround;",i=0,s=t?r.LOOKING_FOR_MODULE:r.SCANNING_MODULE_VARIABLES,d=0,l=0;s<=r.SCANNING_MODULE_FUNCTIONS&&i<e.length;i++)if(47==e[i]&&47==e[i+1]&&32==e[i+2]&&String.fromCharCode.apply(null,e.subarray(i+3,i+3+n[s].length))===n[s])s++;else if(s!=r.SCANNING_MODULE_VARIABLES||l||61!=e[i]||String.fromCharCode.apply(null,e.subarray(i+1,i+1+a.length))!==a){if(l&&40==e[i]){for(var u=0;u<l&&e[i-1-u]==e[d-u];)u++;if(u==l){var c=e[i-1-u];if(c<36||36<c&&c<48||57<c&&c<65||90<c&&c<95||95<c&&c<97||122<c)for(;u;u--)e[i-u]=32}}}else{for(d=i-1;32!=e[d-l];)l++;l&&String.fromCharCode.apply(null,e.subarray(d-l-o.length,d-l))===o||(d=l=0)}return e}},UnityCache:function(){function e(e){console.log("[UnityCache] "+e)}function t(e){return t.link=t.link||document.createElement("a"),t.link.href=e,t.link.href}function r(e){var t=window.location.href.match(/^[a-z]+:\/\/[^\/]+/);return!t||e.lastIndexOf(t[0],0)}function n(){function t(t){if("undefined"==typeof n.database)for(n.database=t,n.database||e("indexedDB database could not be opened");n.queue.length;){var r=n.queue.shift();n.database?n.execute.apply(n,r):"function"==typeof r.onerror&&r.onerror(new Error("operation cancelled"))}}function r(){var e=o.open(i.name,i.version);e.onupgradeneeded=function(e){var t=e.target.result;t.objectStoreNames.contains(d.name)||t.createObjectStore(d.name)},e.onsuccess=function(e){t(e.target.result)},e.onerror=function(){t(null)}}var n=this;n.queue=[];try{var o=window.indexedDB||window.mozIndexedDB||window.webkitIndexedDB||window.msIndexedDB,a=o.open(i.name);a.onupgradeneeded=function(e){var t=e.target.result.createObjectStore(s.name,{keyPath:"url"});["version","company","product","updated","revalidated","accessed"].forEach(function(e){t.createIndex(e,e)})},a.onsuccess=function(e){var n=e.target.result;n.version<i.version?(n.close(),r()):t(n)},a.onerror=function(){t(null)},setTimeout(a.onerror,1e3)}catch(e){t(null)}}function o(e,t,r,n,o){var a={url:e,version:s.version,company:t,product:r,updated:n,revalidated:n,accessed:n,responseHeaders:{},xhr:{}};return o&&(["Last-Modified","ETag"].forEach(function(e){a.responseHeaders[e]=o.getResponseHeader(e)}),["responseURL","status","statusText","response"].forEach(function(e){a.xhr[e]=o[e]})),a}function a(t){this.cache={enabled:!1},t&&(this.cache.control=t.cacheControl,this.cache.company=t.companyName,this.cache.product=t.productName),this.xhr=new XMLHttpRequest(t),this.xhr.addEventListener("load",function(){var t=this.xhr,r=this.cache;r.enabled&&!r.revalidated&&(304==t.status?(r.result.revalidated=r.result.accessed,r.revalidated=!0,l.execute(s.name,"put",[r.result]),e("'"+r.result.url+"' successfully revalidated and served from the indexedDB cache")):200==t.status?(r.result=o(r.result.url,r.company,r.product,r.result.accessed,t),r.revalidated=!0,l.execute(s.name,"put",[r.result],function(t){e("'"+r.result.url+"' successfully downloaded and stored in the indexedDB cache")},function(t){e("'"+r.result.url+"' successfully downloaded but not stored in the indexedDB cache due to the error: "+t)})):e("'"+r.result.url+"' request failed with status: "+t.status+" "+t.statusText))}.bind(this))}var i={name:"UnityCache",version:2},s={name:"XMLHttpRequest",version:1},d={name:"WebAssembly",version:1};n.prototype.execute=function(e,t,r,n,o){if(this.database)try{var a=this.database.transaction([e],["put","delete","clear"].indexOf(t)!=-1?"readwrite":"readonly").objectStore(e);"openKeyCursor"==t&&(a=a.index(r[0]),r=r.slice(1));var i=a[t].apply(a,r);"function"==typeof n&&(i.onsuccess=function(e){n(e.target.result)}),i.onerror=o}catch(e){"function"==typeof o&&o(e)}else"undefined"==typeof this.database?this.queue.push(arguments):"function"==typeof o&&o(new Error("indexedDB access denied"))};var l=new n;a.prototype.send=function(t){var n=this.xhr,o=this.cache,a=arguments;return o.enabled=o.enabled&&"arraybuffer"==n.responseType&&!t,o.enabled?void l.execute(s.name,"get",[o.result.url],function(t){if(!t||t.version!=s.version)return void n.send.apply(n,a);if(o.result=t,o.result.accessed=Date.now(),"immutable"==o.control)o.revalidated=!0,l.execute(s.name,"put",[o.result]),n.dispatchEvent(new Event("load")),e("'"+o.result.url+"' served from the indexedDB cache without revalidation");else if(r(o.result.url)&&(o.result.responseHeaders["Last-Modified"]||o.result.responseHeaders.ETag)){var i=new XMLHttpRequest;i.open("HEAD",o.result.url),i.onload=function(){o.revalidated=["Last-Modified","ETag"].every(function(e){return!o.result.responseHeaders[e]||o.result.responseHeaders[e]==i.getResponseHeader(e)}),o.revalidated?(o.result.revalidated=o.result.accessed,l.execute(s.name,"put",[o.result]),n.dispatchEvent(new Event("load")),e("'"+o.result.url+"' successfully revalidated and served from the indexedDB cache")):n.send.apply(n,a)},i.send()}else o.result.responseHeaders["Last-Modified"]?(n.setRequestHeader("If-Modified-Since",o.result.responseHeaders["Last-Modified"]),n.setRequestHeader("Cache-Control","no-cache")):o.result.responseHeaders.ETag&&(n.setRequestHeader("If-None-Match",o.result.responseHeaders.ETag),n.setRequestHeader("Cache-Control","no-cache")),n.send.apply(n,a)},function(e){n.send.apply(n,a)}):n.send.apply(n,a)},a.prototype.open=function(e,r,n,a,i){return this.cache.result=o(t(r),this.cache.company,this.cache.product,Date.now()),this.cache.enabled=["must-revalidate","immutable"].indexOf(this.cache.control)!=-1&&"GET"==e&&this.cache.result.url.match("^https?://")&&("undefined"==typeof n||n)&&"undefined"==typeof a&&"undefined"==typeof i,this.cache.revalidated=!1,this.xhr.open.apply(this.xhr,arguments)},a.prototype.setRequestHeader=function(e,t){return this.cache.enabled=!1,this.xhr.setRequestHeader.apply(this.xhr,arguments)};var u=new XMLHttpRequest;for(var c in u)a.prototype.hasOwnProperty(c)||!function(e){Object.defineProperty(a.prototype,e,"function"==typeof u[e]?{value:function(){return this.xhr[e].apply(this.xhr,arguments)}}:{get:function(){return this.cache.revalidated&&this.cache.result.xhr.hasOwnProperty(e)?this.cache.result.xhr[e]:this.xhr[e]},set:function(t){this.xhr[e]=t}})}(c);return{XMLHttpRequest:a,WebAssembly:{get:function(e,r){var n={url:t(e),version:d.version,module:null,md5:null};l.execute(d.name,"get",[n.url],function(e){r(e&&e.version==d.version?e:n)},function(){r(n)})},put:function(e,t,r){l.execute(d.name,"put",[e,e.url],t,r)}}}}()};
