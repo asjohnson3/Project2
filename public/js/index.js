@@ -320,7 +320,8 @@ newUserButton.on("click", function () {
 
   var example = {
     username: usernameCreate.val().trim(),
-    password: passwordInput1.val().trim()
+    password: passwordInput1.val().trim(),
+    score: 0
   };
 
   if (!usernameCreate.val().trim() || !passwordInput1.val().trim() || !passwordInput2.val().trim()) {
@@ -332,7 +333,7 @@ newUserButton.on("click", function () {
   } else {
     
     API.saveExample(example).then(function() {
-      window.location.href = "/example";
+      window.location.href = "/";
     });
   }
 });
