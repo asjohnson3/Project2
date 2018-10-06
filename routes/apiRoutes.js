@@ -25,4 +25,17 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  // PUT route for updating posts
+  app.put("/api/examples", function(req, res) {
+    db.Example.update(
+      {score:req.body.score},
+      {
+        where: {
+          username: req.body.username
+        }
+      }).then(function(dbPost) {
+      res.json(dbExample);
+    });
+  });
 };
