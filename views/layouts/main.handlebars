@@ -40,7 +40,7 @@
       <li class="nav-item">
         <a class="nav-link" href="play">Play</a>
       </li>
-      <li class="nav-item dropdown">
+      {{!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           User Stats
@@ -51,7 +51,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
+      </li> --}}
     </ul>
     {{!--
     <form class="form-inline my-2 my-lg-0">
@@ -75,18 +75,13 @@
           </div>
           <div class="modal-body">
             <div class="panel-body">
-              <form accept-charset="UTF-8" role="form">
+              <form accept-charset="UTF-8" role="form" style="margin: auto; padding: auto">
                 <fieldset>
                   <div class="form-group">
                     <input class="form-control username" placeholder="Username" name="username" type="text">
                   </div>
                   <div class="form-group">
                     <input class="form-control password" placeholder="Password" name="password" type="password" value="">
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input name="remember" type="checkbox" value="Remember Me"> Remember Me
-                    </label>
                   </div>
                   <input class="btn btn-lg btn-primary btn-block login-button" type="submit" value="Login">
                 </fieldset>
@@ -113,7 +108,7 @@
           </div>
           <div class="modal-body">
             <div class="panel-body">
-              <form accept-charset="UTF-8" role="form">
+              <form accept-charset="UTF-8" role="form" style="margin: auto; padding: auto">
                 <fieldset>
                   <div class="form-group">
                     <input class="form-control username1" placeholder="Username" name="username" type="text">
@@ -123,11 +118,6 @@
                   </div>
                   <div class="form-group">
                     <input class="form-control password2" placeholder="Confirm Password" name="confirmPassword" type="password" value="">
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input name="remember" type="checkbox" value="Remember Me"> Remember Me
-                    </label>
                   </div>
                   <input class="btn btn-lg btn-primary btn-block new-user" type="submit" value="Create a profile">
                 </fieldset>
