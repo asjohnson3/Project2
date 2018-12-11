@@ -9,11 +9,14 @@ function(e){
     var user = sessionStorage.getItem("user");
     var score = sessionStorage.getItem("score");
     var newScore = sessionStorage.getItem("newScore");
+    var post = {user: user, score: score, newScore: newScore};
+
     // module.exports = function(app) {
         console.log(e); 
         if(Number.isInteger(parseInt(e))){
             sessionStorage.setItem('newScore',e);
             console.log(user, score, newScore); 
+            updatePost(post)
 
             if (newScore > score){
                 console.log("true");
@@ -25,14 +28,14 @@ function(e){
             
         };
 }
-  // Update a given post, bring user to the blog page when done
+//   Update a given post, bring user to the blog page when done
 //   function updatePost(post) {
 //     $.ajax({
 //       method: "PUT",
 //       url: "/api/examples",
 //       data: post
 //     })
-//   }            //   // PUT route for updating posts
+//   },           //   // PUT route for updating posts
             // app.put("/api/examples", function(req, res) {
             //     db.Post.update(req.body,{ where: {
             //         username: req.body.id

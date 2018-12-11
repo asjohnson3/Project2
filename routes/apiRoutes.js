@@ -33,9 +33,24 @@ module.exports = function(app) {
       {
         where: {
           username: req.body.username
-        }
+        },
+        returning: true 
       }).then(function(dbPost) {
-      res.json(dbExample);
+        console.log(dbPost)
+      // res.json(dbPost);
+      // res.sendStatus(200);
     });
   });
 };
+
+/*
+id, name, score, newScore
+PUT Request -> /api/examples/:id
+id -> req.params.id
+app.put('/api/examples', function(req, res) {
+  grab username
+  db.example.update(req.body {name, newScore})
+
+})
+[row, [updatedRow]]
+*/
